@@ -1,1 +1,1 @@
-export { createBeacon } from "./createBeacon";
+export { createBeacon } from './createBeacon';
