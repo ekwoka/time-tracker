@@ -8,6 +8,10 @@ body {
   @apply flex min-h-screen flex-col bg-neutral-800;
 }
 
+[data-tauri-drag-region] {
+  @apply fixed inset-x-0 top-0 h-6;
+}
+
 #root {
   @apply h-full flex-auto;
 }

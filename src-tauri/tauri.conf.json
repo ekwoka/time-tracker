@@ -12,6 +12,9 @@
   },
   "tauri": {
     "allowlist": {
+      "window": {
+        "startDragging": true
+      },
       "fs": {
         "readDir": true,
         "readFile": true,
@@ -66,7 +69,9 @@
         "height": 600,
         "resizable": true,
         "title": "timetracker",
-        "width": 800
+        "width": 800,
+        "hiddenTitle": true,
+        "titleBarStyle": "Overlay"
       }
     ]
   }

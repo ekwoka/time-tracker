@@ -71,7 +71,8 @@
     "importOrder": [
       "solid-?js",
       "@tauri(.*)$",
-      "@/routes(.*)$",
+      "@/pages(.*)$",
+      "@/layout(.*)$",
       "@/organisms(.*)$",
       "@/molecules(.*)$",
       "@/atoms(.*)$",

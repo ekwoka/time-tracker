@@ -2,7 +2,13 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/components": ["./components"],
+      "@/pages": ["./components/pages"],
+      "@/atoms": ["./components/atoms"],
+      "@/molecules": ["./components/molecules"],
+      "@/organisms": ["./components/organisms"],
+      "@/layout": ["./components/layout"]
     },
     "strict": true,
     "target": "ESNext",
