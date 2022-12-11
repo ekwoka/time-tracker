@@ -1,3 +1,4 @@
-export { createBeacon } from './createBeacon';
+export { createBeacon, interceptBeacon } from './createBeacon';
+export { createFileBeacon } from './createFileBeacon';
 export { createTimer } from './createTimer';
-export type { Beacon } from './createBeacon';
+export type { Beacon, BeaconInterceptor } from './createBeacon';
