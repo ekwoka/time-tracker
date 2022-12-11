@@ -14,7 +14,7 @@ export const createBeacon = <
 const isNotEmpty = <R>(val: R | undefined | null): val is R =>
   ![undefined, null].some((falsy) => val === falsy);
 
-type Beacon<T> = {
+export type Beacon<T> = {
   (): T;
   (prev: T | Updater<T>): T;
 };
