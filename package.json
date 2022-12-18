@@ -21,7 +21,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "@tauri-apps/cli": "^1.2.2",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-    "@types/node": "^18.11.16",
+    "@types/node": "^18.11.17",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "autoprefixer": "^10.4.13",
@@ -36,15 +36,17 @@
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.4",
-    "vite": "^4.0.1",
+    "vite": "^4.0.2",
     "vite-plugin-solid": "^2.5.0",
     "vite-plugin-static-copy": "^0.13.0",
     "vite-tsconfig-paths": "^4.0.3"
   },
   "dependencies": {
+    "@formkit/auto-animate": "1.0.0-beta.5",
     "@solid-primitives/raf": "^2.1.4",
     "@solidjs/router": "^0.5.1",
     "@tauri-apps/api": "^1.2.0",
+    "solid-auto-animate": "^0.2.0",
     "solid-heroicons": "^3.1.1",
     "solid-js": "^1.6.5",
     "solid-markdown": "^1.2.0"
@@ -78,6 +80,7 @@
       "@/molecules(.*)$",
       "@/atoms(.*)$",
       "@/hooks(.*)$",
+      "@/stores(.*)$",
       "@/utils(.*)$",
       "@/assets(.*)$",
       "^[./]"

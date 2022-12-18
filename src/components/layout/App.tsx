@@ -5,8 +5,8 @@ import { Pages } from '../pages/Pages';
 
 export const App = () => (
   <div class="min-h-full">
-    <div class="bg-gray-800 pb-32 pt-2">
-      <NavBar />
+    <NavBar />
+    <div class="bg-gray-800 pb-32">
       <Header />
     </div>
 

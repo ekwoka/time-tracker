@@ -8,7 +8,9 @@
       "@/atoms": ["./components/atoms"],
       "@/molecules": ["./components/molecules"],
       "@/organisms": ["./components/organisms"],
-      "@/layout": ["./components/layout"]
+      "@/layout": ["./components/layout"],
+      "@/hooks": ["./hooks"],
+      "@/stores": ["./stores"]
     },
     "strict": true,
     "target": "ESNext",

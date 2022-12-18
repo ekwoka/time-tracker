@@ -1,23 +1,14 @@
 import createRAF from '@solid-primitives/raf';
 
-import { createEffect } from 'solid-js';
-
 import { createBeacon } from './createBeacon';
 
-export const createTimer = (initial = 60_000) => {
-  const value = createBeacon(initial + 500);
-  const done = createBeacon(false);
+export const createTimer = (initial = 0) => {
+  const value = createBeacon(initial);
   let lastTime = Date.now();
   const [running, start, stop] = createRAF(() => {
     const now = Date.now();
-    value(value() - (now - lastTime));
+    value(value() + (now - lastTime));
     lastTime = now;
-  });
-  createEffect(() => {
-    if (value() > 0.5) return;
-    stop();
-    done(true);
-    value(0);
   });
   return {
     value,
@@ -27,6 +18,5 @@ export const createTimer = (initial = 60_000) => {
       lastTime = Date.now();
       start();
     },
-    done,
   } as const;
 };
