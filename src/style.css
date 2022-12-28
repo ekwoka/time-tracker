@@ -15,3 +15,7 @@ body {
 #root {
   @apply h-full flex-auto;
 }
+
+.countdown > *:before {
+  transition: top 1s cubic-bezier(1, 0, 0, 1) !important;
+}
