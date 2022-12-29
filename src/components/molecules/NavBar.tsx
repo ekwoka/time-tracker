@@ -1,3 +1,4 @@
+import { useNavigate } from '@solidjs/router';
 import { Show } from 'solid-js';
 
 import { createBeacon } from '@/hooks';
@@ -7,6 +8,7 @@ import { UserMenu } from './UserMenu';
 
 export const NavBar = () => {
   const openMobileNav = createBeacon(false);
+  const navigate = useNavigate();
   return (
     <nav class="bg-gray-800 sticky top-0">
       <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -22,18 +24,20 @@ export const NavBar = () => {
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="#"
+                  <button
+                    type="button"
+                    onClick={() => navigate('/')}
                     class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page">
-                    Active
-                  </a>
+                    Timer
+                  </button>
 
-                  <a
-                    href="#"
+                  <button
+                    type="button"
+                    onClick={() => navigate('/projects')}
                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                    Inactive
-                  </a>
+                    All Projects
+                  </button>
                 </div>
               </div>
             </div>

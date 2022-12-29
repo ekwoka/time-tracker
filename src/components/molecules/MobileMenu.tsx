@@ -1,19 +1,24 @@
+import { useNavigate } from '@solidjs/router';
+
 export const MobileMenu = () => {
+  const navigate = useNavigate();
   return (
     <div class="border-b border-gray-700 md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 py-3 sm:px-3">
-        <a
-          href="#"
+        <button
+          type="button"
+          onClick={() => navigate('/')}
           class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
           aria-current="page">
-          Active
-        </a>
+          Timer
+        </button>
 
-        <a
-          href="#"
+        <button
+          type="button"
+          onClick={() => navigate('/projects')}
           class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          Inactive
-        </a>
+          View Projects
+        </button>
       </div>
       <div class="border-t border-gray-700 pt-4 pb-3">
         <div class="flex items-center px-5">

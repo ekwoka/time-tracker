@@ -1,6 +1,7 @@
 import { Icon } from 'solid-heroicons';
-import { plus } from 'solid-heroicons/solid-mini';
+import { pencilSquare, plus } from 'solid-heroicons/solid-mini';
 
+import { useNavigate } from '@solidjs/router';
 import { For, Show } from 'solid-js';
 
 import { Beacon, FileBeacon, createBeacon } from '@/hooks';
@@ -12,6 +13,7 @@ import { Modal } from '../molecules/Modal';
 export const TaskListTabs = (props: TaskListTabsProps) => {
   const addProjectIsOpen = createBeacon(false);
   const projectName = createBeacon('');
+  const navigate = useNavigate();
   return (
     <nav class="flex flex-row gap-3 p-2 items-center max-w-full overflow-x-scroll">
       <Show when={props.projects.ready() && !props.projects.data().length}>
@@ -46,9 +48,10 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
         <input
           type="text"
           class="w-full bg-neutral-700 text-neutral-100 rounded"
-          onInput={({ target }) =>
-            projectName((target as HTMLInputElement).value)
-          }
+          value={projectName()}
+          onInput={({ target }) => {
+            projectName((target as HTMLInputElement).value);
+          }}
         />
         <div class="modal-action">
           <button
@@ -67,6 +70,7 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
               currentProjects.push({ id: nextId, name: projectName() });
               props.projects.data(currentProjects);
               addProjectIsOpen(false);
+              projectName('');
             }}
             class="btn btn-success"
             disabled={!projectName()}>
@@ -80,6 +84,12 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
           </button>
         </div>
       </Modal>
+      <button
+        type="button"
+        onClick={() => navigate('/projects')}
+        class="hover:bg-neutral-400 hover:text-neutral-800 transition-colors rounded p-[.125rem]">
+        <Icon path={pencilSquare} class="w-4 h-4" />
+      </button>
     </nav>
   );
 };

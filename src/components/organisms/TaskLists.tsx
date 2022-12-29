@@ -2,7 +2,9 @@ import { autoAnimate } from 'solid-auto-animate';
 
 import { For } from 'solid-js';
 
-import { createBeacon, createFileBeacon } from '@/hooks';
+import { createBeacon } from '@/hooks';
+
+import { projects, tasks } from '@/stores';
 
 import { TaskListTabs } from './TaskListTabs';
 
@@ -72,16 +74,3 @@ export const TaskLists = () => {
     </div>
   );
 };
-
-const projects = createFileBeacon<{ id: number; name: string }[]>(
-  'projectData.json',
-  []
-);
-
-const _sessions = createFileBeacon<
-  { start: number; end: number; projectId: number; taskId: number }[]
->('sessionData.json', []);
-
-const tasks = createFileBeacon<
-  { id: number; name: string; projectId: number }[]
->('taskData.json', []);
