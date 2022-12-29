@@ -12,7 +12,7 @@ export const Modal = (props: ModalProps) => (
     )}
     onClick={() => props.onClose()}>
     <div
-      class="modal-box rounded-none sm:!rounded-2xl"
+      class="modal-box rounded-none sm:!rounded-2xl flex flex-col gap-2"
       onClick={(e) => e.stopPropagation()}>
       {props.children}
     </div>

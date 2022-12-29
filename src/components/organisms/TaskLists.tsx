@@ -1,35 +1,19 @@
 import { autoAnimate } from 'solid-auto-animate';
 
-import { For, createEffect } from 'solid-js';
+import { For } from 'solid-js';
 
 import { createBeacon, createFileBeacon } from '@/hooks';
 
-import { classNames } from '@/utils';
+import { TaskListTabs } from './TaskListTabs';
 
 export const TaskLists = () => {
   autoAnimate;
-  const activeProject = createBeacon<number>(projects.data()[0].id);
+  const activeProject = createBeacon<number>(projects.data()[0]?.id ?? -1);
   const taskInput = createBeacon('');
-  createEffect(() => console.log(taskInput()));
   return (
-    <div class="p-4 text-neutral-200 tracking-wider flex flex-col gap-8">
+    <div class="p-4 text-neutral-300 tracking-wider flex flex-col gap-8">
       <h2 class="text-xl">TaskLists</h2>
-      <nav class="flex flex-row gap-5 p-2">
-        <For each={projects.ready() ? projects.data() : []}>
-          {(proj) => (
-            <button
-              type="button"
-              onClick={() => activeProject(proj.id)}
-              class={classNames(
-                'px-2 tracking-wide',
-                activeProject() === proj.id &&
-                  'border-blue-500  border-b font-semibold'
-              )}>
-              {proj.name}
-            </button>
-          )}
-        </For>
-      </nav>
+      <TaskListTabs projects={projects} activeProject={activeProject} />
       <div class="flex flex-col gap-4 w-full text-neutral-300" use:autoAnimate>
         <For
           each={
@@ -89,16 +73,10 @@ export const TaskLists = () => {
   );
 };
 
-const projects = createFileBeacon('projectData.json', [
-  {
-    id: 1,
-    name: 'Project 1',
-  },
-  {
-    id: 2,
-    name: 'Project 2',
-  },
-]);
+const projects = createFileBeacon<{ id: number; name: string }[]>(
+  'projectData.json',
+  []
+);
 
 const _sessions = createFileBeacon<
   { start: number; end: number; projectId: number; taskId: number }[]

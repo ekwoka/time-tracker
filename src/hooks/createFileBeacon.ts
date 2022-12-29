@@ -8,7 +8,7 @@ import { Beacon, createBeacon, interceptBeacon } from './createBeacon';
 export const createFileBeacon = <T>(
   filename: string,
   initialData: T
-): { data: Beacon<T>; ready: Accessor<boolean> } => {
+): FileBeacon<T> => {
   const beacon = createBeacon(initialData, { equals: false });
   const [ready, setReady] = createSignal(false);
   (async () => {
@@ -26,3 +26,5 @@ export const createFileBeacon = <T>(
 
   return { data, ready };
 };
+
+export type FileBeacon<T> = { data: Beacon<T>; ready: Accessor<boolean> };
