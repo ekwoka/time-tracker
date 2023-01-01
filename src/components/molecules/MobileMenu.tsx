@@ -1,24 +1,25 @@
-import { useNavigate } from '@solidjs/router';
+import { A } from '@solidjs/router';
 
 export const MobileMenu = () => {
-  const navigate = useNavigate();
   return (
     <div class="border-b border-gray-700 md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 py-3 sm:px-3">
-        <button
-          type="button"
-          onClick={() => navigate('/')}
-          class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-          aria-current="page">
+        <A
+          href="/"
+          end={true}
+          class="block px-3 py-2 rounded-md text-base font-medium"
+          activeClass="bg-gray-900 text-white"
+          inactiveClass="text-gray-300 hover:bg-gray-700 hover:text-white">
           Timer
-        </button>
+        </A>
 
-        <button
-          type="button"
-          onClick={() => navigate('/projects')}
-          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+        <A
+          href="/projects"
+          class="block px-3 py-2 rounded-md text-base font-medium"
+          activeClass="bg-gray-900 text-white"
+          inactiveClass="text-gray-300 hover:bg-gray-700 hover:text-white">
           View Projects
-        </button>
+        </A>
       </div>
       <div class="border-t border-gray-700 pt-4 pb-3">
         <div class="flex items-center px-5">
