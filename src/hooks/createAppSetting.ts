@@ -8,7 +8,7 @@ const appSettings = createFileBeacon(
   {} as Record<string, unknown>
 );
 
-export const createAppSettings = <T>(
+export const createAppSetting = <T>(
   setting: string,
   initialData: T
 ): { data: Beacon<T>; ready: Accessor<boolean> } => {

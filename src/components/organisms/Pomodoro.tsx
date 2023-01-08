@@ -1,8 +1,7 @@
 /** @refresh reload */
 import { createEffect } from 'solid-js';
 
-import { createBeacon, createTimer } from '@/hooks';
-import { createAppSettings } from '@/hooks/createAppSettings';
+import { createAppSetting, createBeacon, createTimer } from '@/hooks';
 
 import { appState } from '@/stores';
 
@@ -12,8 +11,8 @@ import { TimerDisplay } from '../atoms';
 import { NumberInput } from '../atoms/NumberInput';
 
 export const Pomodoro = () => {
-  const { data: workLength } = createAppSettings('workLength', 25);
-  const { data: breakLength } = createAppSettings('breakLength', 5);
+  const { data: workLength } = createAppSetting('workLength', 25);
+  const { data: breakLength } = createAppSetting('breakLength', 5);
   const state = createBeacon<'work' | 'break'>('work');
   const { value, running, toggle } = createTimer(0);
   createEffect(() => (appState.isWorking = state() === 'work' && running()));

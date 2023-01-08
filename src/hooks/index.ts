@@ -1,4 +1,4 @@
-export { createAppSettings } from './createAppSettings';
+export { createAppSetting } from './createAppSetting';
 export { createBeacon, interceptBeacon } from './createBeacon';
 export { createFileBeacon } from './createFileBeacon';
 export { createTimer } from './createTimer';
