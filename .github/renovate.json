@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "rangeStrategy": "bump",
+  "assignees": ["ekwoka"],
+  "reviewers": ["ekwoka"],
+  "commitMessagePrefix": ":arrow_up: ",
+  "lockFileMaintenance": { "enabled": true },
+  "schedule": ["after 7pm on friday"],
+  "timezone": "GMT",
+  "stabilityDays": 3,
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "devDependencies"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "devDependencies (major)"
+    },
+    {
+      "matchManagers": ["cargo"],
+      "groupName": "Rust"
+    },
+    {
+      "matchPackagePatterns": ["solid"],
+      "groupName": "Solid"
+    },
+    {
+      "matchPackagePatterns": ["tauri"],
+      "groupName": "Tauri"
+    }
+  ]
+}
