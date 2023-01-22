@@ -1,6 +1,6 @@
-import { Accessor, createComputed } from 'solid-js';
+import { createComputed } from 'solid-js';
 
-import { Beacon, createBeacon, interceptBeacon } from './createBeacon';
+import { createBeacon, interceptBeacon } from './createBeacon';
 import { createFileBeacon } from './createFileBeacon';
 
 const appSettings = createFileBeacon(
@@ -8,15 +8,16 @@ const appSettings = createFileBeacon(
   {} as Record<string, unknown>
 );
 
-export const createAppSetting = <T>(
-  setting: string,
-  initialData: T
-): { data: Beacon<T>; ready: Accessor<boolean> } => {
+export const createAppSetting = <T extends keyof AppSettings>(
+  setting: T,
+  initialData: AppSettings[T]
+) => {
+  type S = AppSettings[T];
   const beacon = createBeacon(
-    (appSettings.data()[setting] as T) ?? initialData,
+    (appSettings.data()[setting] as S) ?? initialData,
     { equals: false }
   );
-  createComputed(() => beacon(appSettings.data()[setting] as T));
+  createComputed(() => beacon(appSettings.data()[setting] as S));
   const data = interceptBeacon(beacon, {
     set: (newValue) => {
       appSettings.data((prev) => ((prev[setting] = newValue), prev));
@@ -25,4 +26,11 @@ export const createAppSetting = <T>(
   });
 
   return { data, ready: appSettings.ready };
+};
+
+type AppSettings = {
+  workLength: number;
+  breakLength: number;
+  activeProject: number;
+  activeTask: number;
 };
