@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "1.0.0-beta.5",
-    "@solid-primitives/raf": "^2.1.4",
-    "@solidjs/router": "^0.6.0",
+    "@solid-primitives/raf": "^2.1.5",
+    "@solidjs/router": "^0.7.0",
     "@tauri-apps/api": "^1.2.0",
     "daisyui": "^2.47.0",
     "solid-auto-animate": "^0.2.0",
