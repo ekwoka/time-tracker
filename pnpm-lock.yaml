@@ -12,7 +12,7 @@ specifiers:
   '@tailwindcss/line-clamp': ^0.4.2
   '@tailwindcss/typography': ^0.5.9
   '@tauri-apps/api': ^1.2.0
-  '@tauri-apps/cli': ^1.2.2
+  '@tauri-apps/cli': ^1.2.3
   '@trivago/prettier-plugin-sort-imports': ^4.0.0
   '@types/node': ^18.11.18
   '@typescript-eslint/eslint-plugin': ^5.48.2
