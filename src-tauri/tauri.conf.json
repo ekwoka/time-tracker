@@ -11,6 +11,9 @@
     "version": "0.0.0"
   },
   "tauri": {
+    "systemTray": {
+      "iconPath": "icons/icon.png"
+    },
     "allowlist": {
       "window": {
         "startDragging": true

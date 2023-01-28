@@ -1,5 +1,5 @@
 /** @refresh reload */
-import { createEffect } from 'solid-js';
+import { createComputed } from 'solid-js';
 
 import { NumberInput, TimerDisplay } from '@/atoms';
 
@@ -16,7 +16,7 @@ export const Pomodoro = () => {
 
   const state = createBeacon<'work' | 'break'>('work');
   const { value, running, toggle } = createTimer(0, isTracking);
-  createEffect(() => (appState.isWorking = state() === 'work' && running()));
+  createComputed(() => (appState.isWorking = state() === 'work' && running()));
   const getStyle = () => {
     if (!running()) return 'text-neutral-100';
     if (state() === 'break') return 'bg-green-500 text-neutral-900';
