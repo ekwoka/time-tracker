@@ -12,6 +12,16 @@ export const createTimer = (initial = 0, activeSignal?: Beacon<boolean>) => {
     value(value() + (now - lastTime));
     lastTime = now;
   });
+  let unfocussedInterval: NodeJS.Timer;
+  document.addEventListener('visibilitychange', () => {
+    if (unfocussedInterval) clearInterval(unfocussedInterval);
+    if (!document.hidden || !running()) return;
+    unfocussedInterval = setInterval(() => {
+      const now = Date.now();
+      value(value() + (now - lastTime));
+      lastTime = now;
+    }, 5000);
+  });
   if (activeSignal) {
     createComputed(() => {
       if (activeSignal() === untrack(running)) return;
