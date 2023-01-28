@@ -1,26 +1,28 @@
 /** @refresh reload */
 import { createEffect } from 'solid-js';
 
+import { NumberInput, TimerDisplay } from '@/atoms';
+
 import { createAppSetting, createBeacon, createTimer } from '@/hooks';
 
 import { appState } from '@/stores';
 
 import { classNames } from '@/utils';
 
-import { TimerDisplay } from '../atoms';
-import { NumberInput } from '../atoms/NumberInput';
-
 export const Pomodoro = () => {
   const { data: workLength } = createAppSetting('workLength', 25);
   const { data: breakLength } = createAppSetting('breakLength', 5);
+  const { data: isTracking } = createAppSetting('tracking', false);
+
   const state = createBeacon<'work' | 'break'>('work');
-  const { value, running, toggle } = createTimer(0);
+  const { value, running, toggle } = createTimer(0, isTracking);
   createEffect(() => (appState.isWorking = state() === 'work' && running()));
   const getStyle = () => {
     if (!running()) return 'text-neutral-100';
     if (state() === 'break') return 'bg-green-500 text-neutral-900';
     return 'bg-red-500 text-neutral-900';
   };
+
   return (
     <div
       class={classNames(

@@ -4,7 +4,7 @@
     "paths": {
       "@/*": ["./*"],
       "@/components": ["./components"],
-      "@/pages": ["./components/pages"],
+      "@/pages": ["./components/pages/Pages.tsx"],
       "@/atoms": ["./components/atoms"],
       "@/molecules": ["./components/molecules"],
       "@/organisms": ["./components/organisms"],

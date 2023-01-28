@@ -1,7 +1,8 @@
-import { Header } from '@/atoms';
+import { Pages } from '@/pages';
 
-import { NavBar } from '../molecules';
-import { Pages } from '../pages/Pages';
+import { NavBar } from '@/molecules';
+
+import { Header } from '@/atoms';
 
 export const App = () => (
   <div class="min-h-full">

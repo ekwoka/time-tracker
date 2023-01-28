@@ -20,6 +20,7 @@ export const createAppSetting = <T extends keyof AppSettings>(
   createComputed(() => beacon(appSettings.data()[setting] as S));
   const data = interceptBeacon(beacon, {
     set: (newValue) => {
+      if (!appSettings.ready()) return newValue;
       appSettings.data((prev) => ((prev[setting] = newValue), prev));
       return newValue;
     },
@@ -33,4 +34,5 @@ type AppSettings = {
   breakLength: number;
   activeProject: number;
   activeTask: number;
+  tracking: boolean;
 };

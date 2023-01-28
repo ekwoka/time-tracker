@@ -1,8 +1,10 @@
 import createRAF from '@solid-primitives/raf';
 
-import { createBeacon } from './createBeacon';
+import { createComputed, untrack } from 'solid-js';
 
-export const createTimer = (initial = 0) => {
+import { Beacon, createBeacon } from './createBeacon';
+
+export const createTimer = (initial = 0, activeSignal?: Beacon<boolean>) => {
   const value = createBeacon(initial);
   let lastTime = Date.now();
   const [running, start, stop] = createRAF(() => {
@@ -10,6 +12,14 @@ export const createTimer = (initial = 0) => {
     value(value() + (now - lastTime));
     lastTime = now;
   });
+  if (activeSignal) {
+    createComputed(() => {
+      if (activeSignal() === untrack(running)) return;
+      if (activeSignal()) start();
+      else stop();
+    });
+    createComputed(() => activeSignal(running()));
+  }
   return {
     value,
     running,
