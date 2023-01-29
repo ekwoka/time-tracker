@@ -1,6 +1,6 @@
-import { createEffect, createMemo } from 'solid-js';
+import { createComputed, createMemo } from 'solid-js';
 
-import { invoke } from '@tauri-apps/api';
+import { appState } from '@/stores';
 
 import { formatTimer } from '@/utils';
 
@@ -13,12 +13,7 @@ export const TimerDisplay = (props: { value: number; target?: number }) => {
     return formatTimer(props.value).split(':');
   });
 
-  createEffect(async (last: Promise<string> | undefined) => {
-    const next = timerValue().join(':');
-    if ((await last) !== next)
-      await invoke('update_tray_title', { title: next });
-    return Promise.resolve(next);
-  });
+  createComputed(() => (appState.timer = timerValue().join(':')));
 
   return (
     <span class="text-4xl font-bold tracking-widest font-mono">

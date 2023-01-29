@@ -4,22 +4,30 @@ import { createFileBeacon } from '@/hooks';
 
 export const appState = createMutable({
   isWorking: false,
-});
+  currentTask: null,
+  currentProject: null,
+  timer: '00:00',
+} as AppState);
 
-export const projects = createFileBeacon<{ id: number; name: string }[]>(
-  'projectData.json',
-  []
-);
+type AppState = {
+  isWorking: boolean;
+  currentTask: Task | null;
+  currentProject: Project | null;
+  timer: string;
+};
 
-export const sessions = createFileBeacon<
-  {
-    start: number;
-    end: number;
-    projectId: number;
-    taskId: number;
-  }[]
->('sessionData.json', []);
+export const projects = createFileBeacon<Project[]>('projectData.json', []);
 
-export const tasks = createFileBeacon<
-  { id: number; name: string; projectId: number }[]
->('taskData.json', []);
+export const sessions = createFileBeacon<Session[]>('sessionData.json', []);
+
+export const tasks = createFileBeacon<Task[]>('taskData.json', []);
+
+type Project = { id: number; name: string };
+type Task = { id: number; name: string; projectId: number };
+
+type Session = {
+  start: number;
+  end: number;
+  projectId: number;
+  taskId: number;
+};
