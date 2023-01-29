@@ -26,8 +26,8 @@ type Project = { id: number; name: string };
 type Task = { id: number; name: string; projectId: number };
 
 type Session = {
+  id: number;
   start: number;
   end: number;
-  projectId: number;
   taskId: number;
 };
