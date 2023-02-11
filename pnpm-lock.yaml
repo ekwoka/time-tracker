@@ -4,7 +4,7 @@ overrides:
   json5@>=2.0.0 <2.2.2: '>=2.2.2'
 
 specifiers:
-  '@formkit/auto-animate': 1.0.0-beta.5
+  '@formkit/auto-animate': 1.0.0-beta.6
   '@solid-primitives/raf': 2.1.5
   '@solidjs/router': 0.7.0
   '@tailwindcss/aspect-ratio': 0.4.2
@@ -18,7 +18,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.51.0
   '@typescript-eslint/parser': 5.51.0
   autoprefixer: 10.4.13
-  daisyui: 2.47.0
+  daisyui: 2.50.0
   eslint: 8.33.0
   eslint-config-prettier: 8.6.0
   eslint-plugin-filename-export: 0.5.0
@@ -40,12 +40,12 @@ specifiers:
   vite-tsconfig-paths: 4.0.5
 
 dependencies:
-  '@formkit/auto-animate': 1.0.0-beta.5
+  '@formkit/auto-animate': 1.0.0-beta.6
   '@solid-primitives/raf': 2.1.5_solid-js@1.6.9
   '@solidjs/router': 0.7.0_solid-js@1.6.9
   '@tauri-apps/api': 1.2.0
-  daisyui: 2.47.0_gbtt6ss3tbiz4yjtvdr6fbrj44
-  solid-auto-animate: 0.2.0_b5hhko2o6rfppljfh4hvi4thci
+  daisyui: 2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44
+  solid-auto-animate: 0.2.0_6mxlt4tgpn2khuyoqu3xtkxsdy
   solid-heroicons: 3.1.1_solid-js@1.6.9
   solid-js: 1.6.9
   solid-markdown: 1.2.0_solid-js@1.6.9
@@ -690,8 +690,8 @@ packages:
       - supports-color
     dev: true
 
-  /@formkit/auto-animate/1.0.0-beta.5:
-    resolution: {integrity: sha512-WoSwyhAZPOe6RB/IgicOtCHtrWwEpfKIZ/H/nxpKfnZL9CB6hhhBGU5bCdMRw7YpAUF2CDlQa+WWh+gCqz5lDg==}
+  /@formkit/auto-animate/1.0.0-beta.6:
+    resolution: {integrity: sha512-PVDhLAlr+B4Xb7e+1wozBUWmXa6BFU8xUPR/W/E+TsQhPS1qkAdAsJ25keEnFrcePSnXHrOsh3tiFbEToOzV9w==}
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -1480,8 +1480,8 @@ packages:
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui/2.47.0_gbtt6ss3tbiz4yjtvdr6fbrj44:
-    resolution: {integrity: sha512-svZpXKldtHjXTEdj/lu2n7b+EQJSatqvmVB59k4dhCDOYUhUZ3jtGuPrgOJlPysHhDjxjCRWWug/fgV5e8tc/w==}
+  /daisyui/2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44:
+    resolution: {integrity: sha512-KiqRvqMXi9rgoH84M8D69gXPg6x+cbdiaHqm8pFHOsXXN1rTl/+OcCKkSnkEwTtIge9VJVDGU6l4B8/n+Juc5g==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
@@ -3538,14 +3538,14 @@ packages:
       is-fullwidth-code-point: 4.0.0
     dev: true
 
-  /solid-auto-animate/0.2.0_b5hhko2o6rfppljfh4hvi4thci:
+  /solid-auto-animate/0.2.0_6mxlt4tgpn2khuyoqu3xtkxsdy:
     resolution: {integrity: sha512-vbi2EYp7p4Fed8B8h6wp7UWWaLSIyLcLofyIJiSFICb9DyRFvwe2K+Gpgip1uA349cUMUvVB+B5HZsglZmYlMA==}
     engines: {node: '>=10'}
     peerDependencies:
       '@formkit/auto-animate': ^1.0
       solid-js: ^1.4
     dependencies:
-      '@formkit/auto-animate': 1.0.0-beta.5
+      '@formkit/auto-animate': 1.0.0-beta.6
       solid-js: 1.6.9
     dev: false
 
