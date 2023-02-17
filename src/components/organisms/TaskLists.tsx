@@ -6,14 +6,14 @@ import { createAppSetting, createBeacon } from '@/hooks';
 
 import { projects, tasks } from '@/stores';
 
-import { classNames } from '@/utils';
+import { classNames, getNextId, setActive } from '@/utils';
 
 import { TaskListTabs } from './TaskListTabs';
 
 export const TaskLists = () => {
   autoAnimate;
-  const { data: activeProject } = createAppSetting('activeProject', -1);
-  const { data: activeTask } = createAppSetting('activeTask', -1);
+  const { data: activeProject } = createAppSetting('activeProject');
+  const { data: activeTask } = createAppSetting('activeTask');
   const taskInput = createBeacon('');
   return (
     <div class="p-4 text-neutral-300 tracking-wider flex flex-col gap-8">
@@ -25,7 +25,9 @@ export const TaskLists = () => {
             tasks.ready()
               ? tasks
                   .data()
-                  .filter((task) => task.projectId === activeProject())
+                  .filter(
+                    (task) => task.active && task.projectId === activeProject()
+                  )
               : []
           }>
           {(task) => (
@@ -48,10 +50,8 @@ export const TaskLists = () => {
                 )}
                 onClick={(e) => {
                   e.stopPropagation();
-                  const toRemove = tasks
-                    .data()
-                    .findIndex((t) => t.id === task.id);
-                  tasks.data((prev) => (prev.splice(toRemove, 1), prev));
+                  tasks.data(setActive(task.id, false));
+                  if (activeTask() === task.id) activeTask(-1);
                 }}>
                 Remove
               </button>
@@ -72,14 +72,14 @@ export const TaskLists = () => {
           type="button"
           class="py-2 px-4 rounded-md bg-neutral-900 min-w-max"
           onClick={() => {
-            const nextId =
-              Math.max(0, ...tasks.data().map((task) => task.id)) + 1;
+            const nextId = getNextId(tasks.data());
             tasks.data(
               (prev) => (
                 prev.push({
                   id: nextId,
                   name: taskInput(),
                   projectId: activeProject(),
+                  active: true,
                 }),
                 prev
               )

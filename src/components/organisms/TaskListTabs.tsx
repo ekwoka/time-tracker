@@ -1,25 +1,31 @@
+import { Modal } from '@/components/molecules';
 import { Icon } from 'solid-heroicons';
 import { pencilSquare, plus } from 'solid-heroicons/solid-mini';
 
 import { useNavigate } from '@solidjs/router';
-import { For, Show } from 'solid-js';
+import { For, Show, createMemo } from 'solid-js';
 
 import { Beacon, FileBeacon, createBeacon } from '@/hooks';
 
-import { classNames } from '@/utils';
+import { Project } from '@/stores';
 
-import { Modal } from '../molecules/Modal';
+import { classNames, getNextId } from '@/utils';
 
 export const TaskListTabs = (props: TaskListTabsProps) => {
   const addProjectIsOpen = createBeacon(false);
   const projectName = createBeacon('');
   const navigate = useNavigate();
+  const currentProjects = createMemo(() =>
+    props.projects.ready()
+      ? props.projects.data().filter((proj) => proj.active)
+      : []
+  );
   return (
     <nav class="flex flex-row gap-3 p-2 items-center max-w-full overflow-x-scroll">
-      <Show when={props.projects.ready() && !props.projects.data().length}>
+      <Show when={props.projects.ready() && !currentProjects().length}>
         No Projects
       </Show>
-      <For each={props.projects.ready() ? props.projects.data() : []}>
+      <For each={props.projects.ready() ? currentProjects() : []}>
         {(proj) => (
           <div
             class={classNames(
@@ -65,9 +71,12 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
                 )
               )
                 return;
-              const nextId =
-                Math.max(0, ...currentProjects.map(({ id }) => id)) + 1;
-              currentProjects.push({ id: nextId, name: projectName() });
+              const nextId = getNextId(currentProjects);
+              currentProjects.push({
+                id: nextId,
+                name: projectName(),
+                active: true,
+              });
               props.projects.data(currentProjects);
               addProjectIsOpen(false);
               projectName('');
@@ -96,5 +105,5 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
 
 type TaskListTabsProps = {
   activeProject: Beacon<number>;
-  projects: FileBeacon<{ id: number; name: string }[]>;
+  projects: FileBeacon<Project[]>;
 };

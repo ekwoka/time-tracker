@@ -6,7 +6,7 @@ import { createAppSetting } from './createAppSetting';
 import { createComputedTitle } from './createComputedTitle';
 
 export const createApp = () => {
-  const activeTask = createAppSetting('activeTask', -1);
+  const activeTask = createAppSetting('activeTask');
   createComputed(() => {
     if (activeTask.ready() && activeTask.data() !== -1)
       appState.currentTask =

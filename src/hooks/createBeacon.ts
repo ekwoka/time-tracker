@@ -20,7 +20,8 @@ export const interceptBeacon = <T>(
   const { get = noop, set = noopReturn } = interceptor;
   return ((val?: Updater<T>) => {
     if (isNotEmpty(val)) {
-      const newValue = typeof val === 'function' ? val(untrack(beacon)) : val;
+      const newValue: T =
+        typeof val === 'function' ? val(untrack(beacon)) : val;
       return beacon(set(newValue));
     }
     get();
@@ -38,7 +39,7 @@ export type Beacon<T> = {
 
 export type BeaconInterceptor<T> = {
   get?: () => T;
-  set?: (prev: T | Updater<T>) => T | Updater<T>;
+  set?: (prev: T) => T;
 };
 
 type Updater<T> = Parameters<Setter<T>>[0];

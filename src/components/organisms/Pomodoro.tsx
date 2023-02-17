@@ -10,9 +10,9 @@ import { appState } from '@/stores';
 import { classNames } from '@/utils';
 
 export const Pomodoro = () => {
-  const { data: workLength } = createAppSetting('workLength', 25);
-  const { data: breakLength } = createAppSetting('breakLength', 5);
-  const { data: isTracking } = createAppSetting('tracking', false);
+  const { data: workLength } = createAppSetting('workLength');
+  const { data: breakLength } = createAppSetting('breakLength');
+  const { data: isTracking } = createAppSetting('tracking');
 
   const state = createBeacon<'work' | 'break'>('work');
   const { value, running, toggle } = createTimer(0, isTracking);
