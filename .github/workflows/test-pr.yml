@@ -43,7 +43,7 @@ jobs:
       - name: Lint
         run: pnpm run lint:check
 
-  test-tauri:
+  Build-Tauri:
     needs: Lint
     strategy:
       fail-fast: false
@@ -91,16 +91,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
 
-      - uses: actions/cache@v3
+      - uses: Swatinem/rust-cache@v2
         name: Setup Cargo cache
         with:
-          path: src-tauri/target
-          key: ${{ runner.os }}-cargo-target
-          restore-keys: |
-            ${{ runner.os }}-cargo
+          workspaces: src-tauri -> target
 
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tauri-script: pnpm run tauri
+          tauriScript: pnpm run tauri
