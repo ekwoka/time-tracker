@@ -6,9 +6,10 @@
   "scripts": {
     "build": "tauri build",
     "dev": "tauri dev",
-    "lint": "run-s lint:*",
+    "lint": "run-s lint:eslint lint:prettier",
     "lint:eslint": "eslint --fix src",
     "lint:prettier": "prettier --write src --loglevel warn",
+    "lint:check": "eslint --max-warnings 10 ./src && prettier --check ./src",
     "serve": "vite preview",
     "vite": "vite",
     "tauri": "tauri"
