@@ -1,9 +1,10 @@
-import { Modal } from '@/components/molecules';
 import { Icon } from 'solid-heroicons';
 import { pencilSquare, plus } from 'solid-heroicons/solid-mini';
 
 import { useNavigate } from '@solidjs/router';
 import { For, Show, createMemo } from 'solid-js';
+
+import { Modal } from '@/molecules';
 
 import { Beacon, FileBeacon, createBeacon } from '@/hooks';
 

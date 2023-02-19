@@ -39,6 +39,13 @@ export const NavBar = () => {
                     inactiveClass="text-gray-300 hover:bg-gray-700 hover:text-white">
                     All Projects
                   </A>
+                  <A
+                    href="/sessions"
+                    class="px-3 py-2 rounded-md text-sm font-medium"
+                    activeClass="bg-gray-900 text-white"
+                    inactiveClass="text-gray-300 hover:bg-gray-700 hover:text-white">
+                    All Sessions
+                  </A>
                 </div>
               </div>
             </div>
