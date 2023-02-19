@@ -20,6 +20,14 @@ export const MobileMenu = () => {
           inactiveClass="text-gray-300 hover:bg-gray-700 hover:text-white">
           View Projects
         </A>
+
+        <A
+          href="/sessions"
+          class="block px-3 py-2 rounded-md text-base font-medium"
+          activeClass="bg-gray-900 text-white"
+          inactiveClass="text-gray-300 hover:bg-gray-700 hover:text-white">
+          View Sessions
+        </A>
       </div>
       <div class="border-t border-gray-700 pt-4 pb-3">
         <div class="flex items-center px-5">
