@@ -18,7 +18,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.52.0
   '@typescript-eslint/parser': 5.52.0
   autoprefixer: 10.4.13
-  daisyui: 2.50.1
+  daisyui: 2.50.2
   eslint: 8.34.0
   eslint-config-prettier: 8.6.0
   eslint-plugin-filename-export: 0.5.1
@@ -44,7 +44,7 @@ dependencies:
   '@solid-primitives/raf': 2.1.6_solid-js@1.6.11
   '@solidjs/router': 0.7.0_solid-js@1.6.11
   '@tauri-apps/api': 1.2.0
-  daisyui: 2.50.1_gbtt6ss3tbiz4yjtvdr6fbrj44
+  daisyui: 2.50.2_gbtt6ss3tbiz4yjtvdr6fbrj44
   solid-auto-animate: 0.2.0_j4a4bgnwchuqg7ro7x5mzbvkqy
   solid-heroicons: 3.1.1_solid-js@1.6.11
   solid-js: 1.6.11
@@ -1480,8 +1480,8 @@ packages:
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui/2.50.1_gbtt6ss3tbiz4yjtvdr6fbrj44:
-    resolution: {integrity: sha512-Z4GuU/ZknYoHt7qfDQSC5rrxMJ6ffNV9baQfCSbo5J/clC1DBppfrqLJXS8A3NPBRo2GbbpKwdA1ZdThWdpBtQ==}
+  /daisyui/2.50.2_gbtt6ss3tbiz4yjtvdr6fbrj44:
+    resolution: {integrity: sha512-CzyTsqdkpP2Zwk5Fl+1pFfL7XewRn/COm4TyKx4DbdITpzADMe01j6YZRG/D0kAOyd7t4rXA3zvkqNc7Ak9ukQ==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
