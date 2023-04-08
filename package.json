@@ -18,13 +18,13 @@
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/forms": "0.5.3",
-    "@tailwindcss/line-clamp": "0.4.2",
+    "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.9",
     "@tauri-apps/cli": "1.2.3",
     "@trivago/prettier-plugin-sort-imports": "4.1.1",
     "@types/node": "18.15.11",
-    "@typescript-eslint/eslint-plugin": "5.57.0",
-    "@typescript-eslint/parser": "5.57.0",
+    "@typescript-eslint/eslint-plugin": "5.57.1",
+    "@typescript-eslint/parser": "5.57.1",
     "autoprefixer": "10.4.14",
     "eslint": "8.37.0",
     "eslint-config-prettier": "8.8.0",
@@ -34,13 +34,13 @@
     "npm-run-all": "4.1.5",
     "postcss": "8.4.21",
     "prettier": "2.8.7",
-    "prettier-plugin-tailwindcss": "0.2.5",
-    "tailwindcss": "3.3.0",
+    "prettier-plugin-tailwindcss": "0.2.6",
+    "tailwindcss": "3.3.1",
     "typescript": "4.9.5",
     "vite": "4.2.1",
     "vite-plugin-solid": "2.7.0",
     "vite-plugin-static-copy": "0.13.1",
-    "vite-tsconfig-paths": "4.0.7"
+    "vite-tsconfig-paths": "4.0.8"
   },
   "dependencies": {
     "@formkit/auto-animate": "1.0.0-beta.6",
