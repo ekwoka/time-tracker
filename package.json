@@ -50,8 +50,8 @@
     "daisyui": "2.51.5",
     "solid-auto-animate": "0.2.0",
     "solid-heroicons": "3.1.1",
-    "solid-js": "1.7.2",
-    "solid-markdown": "1.2.1"
+    "solid-js": "1.7.3",
+    "solid-markdown": "1.2.2"
   },
   "lint-staged": {
     "!(/)**/*.{js,jsx,ts,tsx,mjs}": [
