@@ -17,8 +17,8 @@ dependencies:
     specifier: 1.2.0
     version: 1.2.0
   daisyui:
-    specifier: 2.51.5
-    version: 2.51.5(autoprefixer@10.4.14)(postcss@8.4.22)
+    specifier: 2.51.6
+    version: 2.51.6(autoprefixer@10.4.14)(postcss@8.4.22)
   solid-auto-animate:
     specifier: 0.2.0
     version: 0.2.0(@formkit/auto-animate@1.0.0-beta.6)(solid-js@1.7.3)
@@ -1516,8 +1516,8 @@ packages:
   /csstype@3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui@2.51.5(autoprefixer@10.4.14)(postcss@8.4.22):
-    resolution: {integrity: sha512-L05dRw0tasmz2Ha+10LhftEGLq4kaA8vRR/T0wDaXfHwqcgsf81jfXDJ6NlZ63Z7Rl1k3rj7UHs0l0p7CM3aYA==}
+  /daisyui@2.51.6(autoprefixer@10.4.14)(postcss@8.4.22):
+    resolution: {integrity: sha512-JRqOKayuFCmWe4X4k6Qvx1y7V/VNao8U5eTSOhusOKIzCsYqf56+TCSe4d7zmqGE0V6JiLDYAT8JeoWUeRKFCw==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6

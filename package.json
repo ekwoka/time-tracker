@@ -47,7 +47,7 @@
     "@solid-primitives/raf": "2.1.10",
     "@solidjs/router": "0.8.2",
     "@tauri-apps/api": "1.2.0",
-    "daisyui": "2.51.5",
+    "daisyui": "2.51.6",
     "solid-auto-animate": "0.2.0",
     "solid-heroicons": "3.1.1",
     "solid-js": "1.7.3",
