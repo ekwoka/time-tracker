@@ -8,8 +8,8 @@ dependencies:
     specifier: 1.0.0-beta.6
     version: 1.0.0-beta.6
   '@solid-primitives/raf':
-    specifier: 2.1.11
-    version: 2.1.11(solid-js@1.7.5)
+    specifier: 2.1.12
+    version: 2.1.12(solid-js@1.7.5)
   '@solidjs/router':
     specifier: 0.8.2
     version: 0.8.2(solid-js@1.7.5)
@@ -23,8 +23,8 @@ dependencies:
     specifier: 0.2.0
     version: 0.2.0(@formkit/auto-animate@1.0.0-beta.6)(solid-js@1.7.5)
   solid-heroicons:
-    specifier: 3.1.1
-    version: 3.1.1(solid-js@1.7.5)
+    specifier: 3.2.3
+    version: 3.2.3(solid-js@1.7.5)
   solid-js:
     specifier: 1.7.5
     version: 1.7.5
@@ -777,17 +777,17 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@solid-primitives/raf@2.1.11(solid-js@1.7.5):
-    resolution: {integrity: sha512-cHmjJMwHNYC+o5OUO90ZG71zKjroIXbjqKRZEYMIwemIvZQfEveM8/KgvOIrjrxAer6fkk6IWtlpSPQA18CYgw==}
+  /@solid-primitives/raf@2.1.12(solid-js@1.7.5):
+    resolution: {integrity: sha512-rGz/zumMg08sTJCnN+jNQfVKol3M9SQcd0aj8adQVEhqp0KxW6fHPH/z8yWoCU6Ie1ddrHnok2sJaGCu9cHehg==}
     peerDependencies:
       solid-js: ^1.6.12
     dependencies:
-      '@solid-primitives/utils': 6.1.1(solid-js@1.7.5)
+      '@solid-primitives/utils': 6.2.0(solid-js@1.7.5)
       solid-js: 1.7.5
     dev: false
 
-  /@solid-primitives/utils@6.1.1(solid-js@1.7.5):
-    resolution: {integrity: sha512-wxxUdxja126jTROs9Ro8Z5ExbHs9rv2Tl744S3Qmzki/gTcTXW8D1TvTArQcjqkCvSw8OIQ2EO2NI8sR28Trxg==}
+  /@solid-primitives/utils@6.2.0(solid-js@1.7.5):
+    resolution: {integrity: sha512-T62WlLwKkbmicsw/xpwMQyv9MmZRSaVyutXfS5icc9v0cb8qGMUxRxr5LVvZHYQCZ9DEFboZB0r711xsbVBbeA==}
     peerDependencies:
       solid-js: ^1.6.12
     dependencies:
@@ -3598,8 +3598,8 @@ packages:
       solid-js: 1.7.5
     dev: false
 
-  /solid-heroicons@3.1.1(solid-js@1.7.5):
-    resolution: {integrity: sha512-wfU/SqxqxWxInvfFlKJfCBPnJ94Zq1GQFiFL3M0KwZzT81lSF5yIC4HA/Czp3DYrn+dUumjO0qdrx8Ab3cy2sA==}
+  /solid-heroicons@3.2.3(solid-js@1.7.5):
+    resolution: {integrity: sha512-CGWuTGil6pM1Md2T9tVg98oKdl/U7TNHoyT2ogrN4PuZAEx7oNXTGuvdLgg8CQXSqe+Ht7EHQl1nwTWG5NPwzA==}
     peerDependencies:
       solid-js: '>= ^1.2.5'
     dependencies:
