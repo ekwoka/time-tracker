@@ -9,8 +9,8 @@ overrides:
 
 dependencies:
   '@formkit/auto-animate':
-    specifier: 1.0.0-beta.6
-    version: 1.0.0-beta.6
+    specifier: 1.0.0-pre-alpha.3
+    version: 1.0.0-pre-alpha.3
   '@solid-primitives/raf':
     specifier: 2.1.12
     version: 2.1.12(solid-js@1.7.6)
@@ -21,11 +21,11 @@ dependencies:
     specifier: 1.3.0
     version: 1.3.0
   daisyui:
-    specifier: 3.0.22
-    version: 3.0.22(postcss@8.4.24)
+    specifier: 3.1.0
+    version: 3.1.0(postcss@8.4.24)
   solid-auto-animate:
     specifier: 0.2.0
-    version: 0.2.0(@formkit/auto-animate@1.0.0-beta.6)(solid-js@1.7.6)
+    version: 0.2.0(@formkit/auto-animate@1.0.0-pre-alpha.3)(solid-js@1.7.6)
   solid-heroicons:
     specifier: 3.2.3
     version: 3.2.3(solid-js@1.7.6)
@@ -706,8 +706,16 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@formkit/auto-animate@1.0.0-beta.6:
-    resolution: {integrity: sha512-PVDhLAlr+B4Xb7e+1wozBUWmXa6BFU8xUPR/W/E+TsQhPS1qkAdAsJ25keEnFrcePSnXHrOsh3tiFbEToOzV9w==}
+  /@formkit/auto-animate@1.0.0-pre-alpha.3:
+    resolution: {integrity: sha512-lMVZ3LFUIu0RIxCEwmV8nUUJQ46M2bv2NDU3hrhZivViuR1EheC8Mj5sx/ACqK5QLK8XB8z7GDIZBUGdU/9OZQ==}
+    peerDependencies:
+      react: ^16.8.0
+      vue: ^3.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      vue:
+        optional: true
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
@@ -1575,8 +1583,8 @@ packages:
   /csstype@3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui@3.0.22(postcss@8.4.24):
-    resolution: {integrity: sha512-2xdRxQUUB+O0Mcww65QMwwo0fjnos4JmyLhX6F4WxWTngjy9eYyxdQChtsJB3GUl0jNYdZfmnK48gJNyhMBX8Q==}
+  /daisyui@3.1.0(postcss@8.4.24):
+    resolution: {integrity: sha512-G4dz/bRZVvlhQ/FtezXSg0rXOXzDJ0PcnMqeLSwCYNWXxf46fNJ8LWeV5qwsYOdJbXiXoZLnwyy+BsNoWZ+Bjg==}
     engines: {node: '>=16.9.0'}
     peerDependencies:
       postcss: ^8
@@ -3638,14 +3646,14 @@ packages:
       is-fullwidth-code-point: 4.0.0
     dev: true
 
-  /solid-auto-animate@0.2.0(@formkit/auto-animate@1.0.0-beta.6)(solid-js@1.7.6):
+  /solid-auto-animate@0.2.0(@formkit/auto-animate@1.0.0-pre-alpha.3)(solid-js@1.7.6):
     resolution: {integrity: sha512-vbi2EYp7p4Fed8B8h6wp7UWWaLSIyLcLofyIJiSFICb9DyRFvwe2K+Gpgip1uA349cUMUvVB+B5HZsglZmYlMA==}
     engines: {node: '>=10'}
     peerDependencies:
       '@formkit/auto-animate': ^1.0
       solid-js: ^1.4
     dependencies:
-      '@formkit/auto-animate': 1.0.0-beta.6
+      '@formkit/auto-animate': 1.0.0-pre-alpha.3
       solid-js: 1.7.6
     dev: false
 
