@@ -27,8 +27,8 @@ dependencies:
     specifier: 0.2.0
     version: 0.2.0(@formkit/auto-animate@1.0.0-pre-alpha.3)(solid-js@1.7.6)
   solid-heroicons:
-    specifier: 3.2.3
-    version: 3.2.3(solid-js@1.7.6)
+    specifier: 3.2.4
+    version: 3.2.4(solid-js@1.7.6)
   solid-js:
     specifier: 1.7.6
     version: 1.7.6
@@ -3657,8 +3657,8 @@ packages:
       solid-js: 1.7.6
     dev: false
 
-  /solid-heroicons@3.2.3(solid-js@1.7.6):
-    resolution: {integrity: sha512-CGWuTGil6pM1Md2T9tVg98oKdl/U7TNHoyT2ogrN4PuZAEx7oNXTGuvdLgg8CQXSqe+Ht7EHQl1nwTWG5NPwzA==}
+  /solid-heroicons@3.2.4(solid-js@1.7.6):
+    resolution: {integrity: sha512-u6BMdFLvkJnvUGYzdFcWp1wvJ4hb9Y1zd3AbZ9D3bUmmiy9jBzNZX+RcqBCI2EKRvdQwAb1UB9bkESfqfhayDg==}
     peerDependencies:
       solid-js: '>= ^1.2.5'
     dependencies:
