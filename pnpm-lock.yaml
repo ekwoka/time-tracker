@@ -21,8 +21,8 @@ dependencies:
     specifier: 1.4.0
     version: 1.4.0
   daisyui:
-    specifier: 3.6.0
-    version: 3.6.0
+    specifier: 3.6.3
+    version: 3.6.3
   solid-auto-animate:
     specifier: 0.2.0
     version: 0.2.0(@formkit/auto-animate@1.0.0-pre-alpha.3)(solid-js@1.7.11)
@@ -1598,8 +1598,8 @@ packages:
   /csstype@3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui@3.6.0:
-    resolution: {integrity: sha512-mcb9qemKAL57M7cymGr22cZ7yIcIVALOpI7LXHvTWegpMInO0/1Pg7919z7xGIslHBqAwwPYcp//x6wwA07UjA==}
+  /daisyui@3.6.3:
+    resolution: {integrity: sha512-VNWogAjx37H8kNYd2E/+r1OXc6dOvJTKlKltqIKAlNMFVfx2BIKPcmnVxaHQLfj2vhv1mYDBjgWj+1enQ+4yZA==}
     engines: {node: '>=16.9.0'}
     dependencies:
       colord: 2.9.3
