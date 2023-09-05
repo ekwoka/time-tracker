@@ -7,13 +7,13 @@ import { Beacon, createBeacon, interceptBeacon } from './createBeacon';
 
 export const createFileBeacon = <T>(
   filename: string,
-  initialData: T
+  initialData: T,
 ): FileBeacon<T> => {
   const beacon = createBeacon(initialData, { equals: false });
   const [ready, setReady] = createSignal(false);
   (async () => {
     beacon(
-      JSON.parse(await getAppData(filename, JSON.stringify(initialData))) as T
+      JSON.parse(await getAppData(filename, JSON.stringify(initialData))) as T,
     );
     setReady(true);
   })();

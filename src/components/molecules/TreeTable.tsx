@@ -25,7 +25,7 @@ export const TreeTable = <T,>(props: TreeTableProps<T>) => {
         <div
           class={classNames(
             'flex flex-col gap-1 pl-4 mb-4',
-            !expanded() && 'hidden'
+            !expanded() && 'hidden',
           )}>
           <For each={props.data.data as T[]}>
             {(value) => props.children(value)}

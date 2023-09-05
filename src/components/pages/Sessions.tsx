@@ -27,17 +27,26 @@ export const Sessions = () => {
     };
     return {
       name: 'Work Sessions',
-      data: sessionList().reduce((acc, sess) => {
-        const [task, project] = taskAndProject(sess.taskId) ?? [];
-        if (!(task && project)) return acc;
-        acc[project.id] = acc[project.id] ?? { name: project.name, data: {} };
-        acc[project.id].data[task.id] = acc[project.id].data[task.id] ?? {
-          name: task.name,
-          data: [],
-        };
-        acc[project.id].data[task.id].data.push(sess);
-        return acc;
-      }, {} as Record<string | number, { name: string; data: Record<string | number, { name: string; data: Session[] }> }>),
+      data: sessionList().reduce(
+        (acc, sess) => {
+          const [task, project] = taskAndProject(sess.taskId) ?? [];
+          if (!(task && project)) return acc;
+          acc[project.id] = acc[project.id] ?? { name: project.name, data: {} };
+          acc[project.id].data[task.id] = acc[project.id].data[task.id] ?? {
+            name: task.name,
+            data: [],
+          };
+          acc[project.id].data[task.id].data.push(sess);
+          return acc;
+        },
+        {} as Record<
+          string | number,
+          {
+            name: string;
+            data: Record<string | number, { name: string; data: Session[] }>;
+          }
+        >,
+      ),
     };
   });
   createEffect(() => console.log('organizedSessions', organizedSessions()));
@@ -53,8 +62,8 @@ export const Sessions = () => {
               0,
               sessionList().reduce(
                 (tot, sess) => tot + (sess.end ?? Date.now()) - sess.start,
-                0
-              )
+                0,
+              ),
             )}
           </p>
         </div>
@@ -67,8 +76,8 @@ export const Sessions = () => {
               0,
               sessionList().reduce(
                 (tot, sess) => tot + (sess.end ?? Date.now()) - sess.start,
-                0
-              ) / sessionList().length
+                0,
+              ) / sessionList().length,
             )}
           </p>
         </div>
@@ -82,8 +91,8 @@ export const Sessions = () => {
               sessionList().reduce(
                 (max, sess) =>
                   Math.max(max, (sess.end ?? Date.now()) - sess.start),
-                0
-              )
+                0,
+              ),
             )}
           </p>
         </div>
@@ -111,8 +120,8 @@ export const Sessions = () => {
                   flattenNestedTree(props).reduce(
                     (total, session) =>
                       total + (session.end ?? Date.now()) - session.start,
-                    0
-                  )
+                    0,
+                  ),
                 )}
               </span>
             </h2>
@@ -125,7 +134,7 @@ export const Sessions = () => {
               <span class="text-xs uppercase tracking-widest">
                 {new Date(session.end ?? session.start).toLocaleDateString(
                   'en-US',
-                  { month: 'short', day: 'numeric' }
+                  { month: 'short', day: 'numeric' },
                 )}
               </span>
               <span>
@@ -144,6 +153,6 @@ const flattenNestedTree = <T,>(tree: NestedTree<T>): T[] => {
   if (Array.isArray(tree.data)) return tree.data;
   return Object.values(tree.data).reduce(
     (acc, node) => [...acc, ...flattenNestedTree(node)],
-    [] as T[]
+    [] as T[],
   );
 };

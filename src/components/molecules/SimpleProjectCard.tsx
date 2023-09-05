@@ -30,7 +30,7 @@ export const SimpleProjectCard = ({ project, onDelete }: ProjectCardProps) => {
               const current = prev.find(({ id }) => id === project.id);
               if (!current)
                 throw new Error(
-                  `No idea how this happened but somehow you're editing a project that doesn't exist?`
+                  `No idea how this happened but somehow you're editing a project that doesn't exist?`,
                 );
               current.name = projectName();
               return prev;

@@ -27,7 +27,7 @@ export const Pomodoro = () => {
     <div
       class={classNames(
         'w-full min-h-[12rem] p-4 flex flex-col items-center gap-6',
-        getStyle()
+        getStyle(),
       )}>
       <div class="flex gap-6">
         <NumberInput

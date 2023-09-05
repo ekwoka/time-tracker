@@ -19,7 +19,7 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
   const currentProjects = createMemo(() =>
     props.projects.ready()
       ? props.projects.data().filter((proj) => proj.active)
-      : []
+      : [],
   );
   return (
     <nav class="flex flex-row gap-3 p-2 items-center max-w-full overflow-x-scroll">
@@ -32,7 +32,7 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
             class={classNames(
               'tracking-wide min-w-max',
               props.activeProject() === proj.id &&
-                'border-blue-500  border-b font-semibold'
+                'border-blue-500  border-b font-semibold',
             )}>
             <button
               type="button"
@@ -68,7 +68,7 @@ export const TaskListTabs = (props: TaskListTabsProps) => {
               if (
                 currentProjects.some(
                   (proj) =>
-                    proj.name.toLowerCase() === projectName().toLowerCase()
+                    proj.name.toLowerCase() === projectName().toLowerCase(),
                 )
               )
                 return;

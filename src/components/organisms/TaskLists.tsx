@@ -26,7 +26,7 @@ export const TaskLists = () => {
               ? tasks
                   .data()
                   .filter(
-                    (task) => task.active && task.projectId === activeProject()
+                    (task) => task.active && task.projectId === activeProject(),
                   )
               : []
           }>
@@ -34,7 +34,7 @@ export const TaskLists = () => {
             <div
               class={classNames(
                 'flex flex-row gap-4 rounded overflow-hidden p-1 transition-colors duration-500',
-                activeTask() === task.id && 'bg-gray-600'
+                activeTask() === task.id && 'bg-gray-600',
               )}>
               <button
                 class="w-full text-left"
@@ -46,7 +46,7 @@ export const TaskLists = () => {
                   'bg-neutral-800 rounded py-2 px-4 min-w-max transition-colors font-medium tracking-wide',
                   activeTask() === task.id
                     ? 'hover:bg-red-600'
-                    : 'hover:bg-red-800'
+                    : 'hover:bg-red-800',
                 )}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -82,7 +82,7 @@ export const TaskLists = () => {
                   active: true,
                 }),
                 prev
-              )
+              ),
             );
             taskInput('');
           }}>
