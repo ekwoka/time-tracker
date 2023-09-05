@@ -8,7 +8,7 @@ export const Modal = (props: ModalProps) => (
   <div
     class={classNames(
       'modal modal-bottom sm:modal-middle',
-      props.open() && 'modal-open'
+      props.open() && 'modal-open',
     )}
     onClick={() => props.onClose()}>
     <div

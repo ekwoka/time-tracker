@@ -11,7 +11,7 @@ export const createAppSettings = <T extends object>(defaults: T) => {
     if (!fileBeacon.ready()) return;
     for (const [key, value] of Object.entries(fileBeacon.data()) as [
       keyof T,
-      T[keyof T]
+      T[keyof T],
     ][])
       if (appSettings[key] !== value) appSettings[key] = value;
   });

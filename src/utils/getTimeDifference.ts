@@ -15,7 +15,7 @@ export const getDuration = (start: number | Date, end: number | Date) => {
 
 export const getTimeDifference = (start: number | Date, end: number | Date) => {
   const [startTime, endTime] = [start, end].map((time) =>
-    new Date(time).getTime()
+    new Date(time).getTime(),
   );
   const diff = endTime - startTime;
   const second = Math.floor(diff / 1000);

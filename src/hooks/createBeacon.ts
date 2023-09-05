@@ -6,7 +6,7 @@ import { noop, noopReturn } from '@/utils';
 
 export const createBeacon = <T>(
   val: T,
-  options?: SignalOptions<T>
+  options?: SignalOptions<T>,
 ): Beacon<T> => {
   const [signal, setSignal] = createSignal<T>(val, options);
   return ((val?: Updater<T>) =>
@@ -15,7 +15,7 @@ export const createBeacon = <T>(
 
 export const interceptBeacon = <T>(
   beacon: Beacon<T>,
-  interceptor: BeaconInterceptor<T>
+  interceptor: BeaconInterceptor<T>,
 ): Beacon<T> => {
   const { get = noop, set = noopReturn } = interceptor;
   return ((val?: Updater<T>) => {

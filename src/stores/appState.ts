@@ -54,8 +54,8 @@ createComputed(
         : tasks
             .data()
             .find(
-              (task) => task.id === appSettings.activeTask && task.active
-            ) ?? null)
+              (task) => task.id === appSettings.activeTask && task.active,
+            ) ?? null),
 );
 
 createComputed(
@@ -66,13 +66,13 @@ createComputed(
         : projects
             .data()
             .find(
-              (proj) => proj.id === appSettings.activeProject && proj.active
-            ) ?? null)
+              (proj) => proj.id === appSettings.activeProject && proj.active,
+            ) ?? null),
 );
 
 const resetSession = () => {
   sessions.data((prev) =>
-    prev.map((s) => (s.end ? s : ((s.end = Date.now()), s)))
+    prev.map((s) => (s.end ? s : ((s.end = Date.now()), s))),
   );
   appState.currentSession = null;
 };
