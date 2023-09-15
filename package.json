@@ -23,11 +23,11 @@
     "@tailwindcss/typography": "0.5.10",
     "@tauri-apps/cli": "1.4.0",
     "@trivago/prettier-plugin-sort-imports": "4.2.0",
-    "@types/node": "20.5.9",
-    "@typescript-eslint/eslint-plugin": "6.6.0",
-    "@typescript-eslint/parser": "6.6.0",
+    "@types/node": "20.6.0",
+    "@typescript-eslint/eslint-plugin": "6.7.0",
+    "@typescript-eslint/parser": "6.7.0",
     "autoprefixer": "10.4.15",
-    "eslint": "8.48.0",
+    "eslint": "8.49.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-filename-export": "1.0.4",
     "husky": "8.0.3",
@@ -41,7 +41,7 @@
     "vite": "4.4.9",
     "vite-plugin-solid": "2.7.0",
     "vite-plugin-static-copy": "0.17.0",
-    "vite-tsconfig-paths": "4.2.0"
+    "vite-tsconfig-paths": "4.2.1"
   },
   "dependencies": {
     "@formkit/auto-animate": "1.0.0-pre-alpha.3",
