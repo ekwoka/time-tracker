@@ -15,8 +15,8 @@ dependencies:
     specifier: 2.1.13
     version: 2.1.13(solid-js@1.8.5)
   '@solidjs/router':
-    specifier: 0.8.3
-    version: 0.8.3(solid-js@1.8.5)
+    specifier: 0.8.4
+    version: 0.8.4(solid-js@1.8.5)
   '@tauri-apps/api':
     specifier: 1.5.1
     version: 1.5.1
@@ -804,8 +804,8 @@ packages:
       solid-js: 1.8.5
     dev: false
 
-  /@solidjs/router@0.8.3(solid-js@1.8.5):
-    resolution: {integrity: sha512-oJuqQo10rVTiQYhe1qXIG1NyZIZ2YOwHnlLc8Xx+g/iJhFCJo1saLOIrD/Dkh2fpIaIny5ZMkz1cYYqoTYGJbg==}
+  /@solidjs/router@0.8.4(solid-js@1.8.5):
+    resolution: {integrity: sha512-Gi/WVoVseGMKS1DBdT3pNAMgOzEOp6Q3dpgNd2mW9GUEnVocPmtyBjDvXwN6m7tjSGsqqfqJFXk7bm1hxabSRw==}
     peerDependencies:
       solid-js: ^1.5.3
     dependencies:
