@@ -33,8 +33,8 @@ dependencies:
     specifier: 1.8.7
     version: 1.8.7
   solid-markdown:
-    specifier: 1.2.2
-    version: 1.2.2(solid-js@1.8.7)
+    specifier: 2.0.0
+    version: 2.0.0(solid-js@1.8.7)
 
 devDependencies:
   '@tailwindcss/aspect-ratio':
@@ -1045,10 +1045,6 @@ packages:
     dependencies:
       undici-types: 5.26.5
     dev: true
-
-  /@types/prop-types@15.7.5:
-    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: false
 
   /@types/semver@7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
@@ -3368,8 +3364,8 @@ packages:
     hasBin: true
     dev: true
 
-  /property-information@6.2.0:
-    resolution: {integrity: sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==}
+  /property-information@6.4.0:
+    resolution: {integrity: sha512-9t5qARVofg2xQqKtytzt+lZ4d1Qvj8t5B8fEwXK6qOfgRLgH/b13QlgEyDh033NOS31nXeFbYv7CLUDG1CeifQ==}
     dev: false
 
   /punycode@2.3.0:
@@ -3420,8 +3416,8 @@ packages:
       - supports-color
     dev: false
 
-  /remark-parse@10.0.1:
-    resolution: {integrity: sha512-1fUyHr2jLsVOkhbvPRBJ5zTKZZyD6yZzYaWCS6BPBdQ8vEMBCH+9zNCDA6tET/zHCi/jLqjCWtlJZUPk+DbnFw==}
+  /remark-parse@10.0.2:
+    resolution: {integrity: sha512-3ydxgHa/ZQzG8LvC7jTXccARYDcRld3VfcgIIFs7bI6vbRSxJJmzgLEIIoYKyrfhaY+ujuWaf/PJiMZXoiCXgw==}
     dependencies:
       '@types/mdast': 3.0.10
       mdast-util-from-markdown: 1.2.0
@@ -3603,22 +3599,20 @@ packages:
       csstype: 3.1.1
       seroval: 0.15.1
 
-  /solid-markdown@1.2.2(solid-js@1.8.7):
-    resolution: {integrity: sha512-ohRnAgGqMyUCsiDx0uHWpo++6+2YEKnGwYBIR0ioJV0p601s5Ln0fOBXxBYN3DbgFiD/IDwgv4l9hMPxtUwoXA==}
+  /solid-markdown@2.0.0(solid-js@1.8.7):
+    resolution: {integrity: sha512-TttuvRaAuvHNIOZ2Weqfi4C16SAE5QaWA4qLwZY8Ad/g7gQyE3aUenXK4sgy9spM/uumz150JIc2oxDGiNLfEw==}
+    engines: {node: '>=18', pnpm: '>=8.6.0'}
     peerDependencies:
-      solid-js: ^1.2.0
+      solid-js: ^1.6.0
     dependencies:
-      '@types/hast': 2.3.4
-      '@types/prop-types': 15.7.5
-      '@types/unist': 2.0.6
       comma-separated-tokens: 2.0.3
-      property-information: 6.2.0
+      property-information: 6.4.0
       remark-gfm: 3.0.1
-      remark-parse: 10.0.1
+      remark-parse: 10.0.2
       remark-rehype: 10.1.0
       solid-js: 1.8.7
       space-separated-tokens: 2.0.2
-      style-to-object: 0.4.1
+      style-to-object: 0.3.0
       unified: 10.1.2
       unist-util-visit: 4.1.2
       vfile: 5.3.7
@@ -3740,8 +3734,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /style-to-object@0.4.1:
-    resolution: {integrity: sha512-HFpbb5gr2ypci7Qw+IOhnP2zOU7e77b+rzM+wTzXzfi1PrtBCX0E7Pk4wL4iTLnhzZ+JgEGAhX81ebTg/aYjQw==}
+  /style-to-object@0.3.0:
+    resolution: {integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==}
     dependencies:
       inline-style-parser: 0.1.1
     dev: false
